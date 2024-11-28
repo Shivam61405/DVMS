@@ -1,15 +1,39 @@
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, IconButton, InputBase, Avatar } from "@mui/material";
 import React from "react";
+import { Search, Notifications, Settings } from "@mui/icons-material";
 
 const Header = ({ title, subtitle }) => {
   return (
-    <Box>
-      <Typography variant="h2" color="secondary" fontWeight="bold" sx={{ mb: 1 }}>
-        {title}
-      </Typography>
-      <Typography variant="h5" color="textSecondary">
-        {subtitle}
-      </Typography>
+    <Box alignItems="center" display="flex" justifyContent="space-between" mb={4} bgcolor="white" p={2}>
+      <Box>
+        <Typography color="secondary" fontWeight="bold" mb={1} variant="h2">
+          {title}
+        </Typography>
+        <Typography color="textSecondary" variant="h5">
+          {subtitle}
+        </Typography>
+      </Box>
+      <Box alignItems="center" display="flex">
+        <Box
+          alignItems="center"
+          bgcolor="#D3D3D31" 
+          borderRadius="8px"
+          display="flex"
+          mr={2}
+          p={1}
+          sx={{ border: '2px solid royalblue' }} // Added border style
+        >
+          <Search />
+          <InputBase ml={1} placeholder="Search for something" />
+        </Box>
+        <IconButton>
+          <Notifications />
+        </IconButton>
+        <IconButton>
+          <Settings />
+        </IconButton>
+        <Avatar alt="User profile" ml={1} src="https://placehold.co/40x40" />
+      </Box>
     </Box>
   );
 };
