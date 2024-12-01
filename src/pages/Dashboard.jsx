@@ -144,7 +144,12 @@ const Dashboard = () => {
                 paddingAngle={5}
               >
                 {dataPie.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={COLORS[index % COLORS.length]}
+                    style={{ transition: 'transform 0.3s', transformOrigin: 'center' }}
+                    className="pie-chart-cell"
+                  />
                 ))}
               </Pie>
             </PieChart>
@@ -236,5 +241,4 @@ const Dashboard = () => {
     </Box>
   );
 };
-
 export default Dashboard;

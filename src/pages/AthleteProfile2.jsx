@@ -14,7 +14,7 @@ const AthleteProfile2 = () => {
               <Grid item xs={12} md={3} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Avatar
                   alt="Profile of the athlete"
-                  src="https://placehold.co/100x100"
+                  src="https://pnggallery.com/wp-content/uploads/chotta-bheem-01.png"
                   sx={{ width: 100, height: 100 }}
                 />
               </Grid>
@@ -33,7 +33,7 @@ const AthleteProfile2 = () => {
                   <Grid item xs={12} md={6}>
                     <TextField
                       label="Athlete Name"
-                      value="Ritika"
+                      value="Chota Bheem"
                       fullWidth
                       InputProps={{
                         readOnly: true,
@@ -43,7 +43,7 @@ const AthleteProfile2 = () => {
                   <Grid item xs={12} md={6}>
                     <TextField
                       label="State"
-                      value="Haryana"
+                      value="Indraprastha"
                       fullWidth
                       InputProps={{
                         readOnly: true,
@@ -53,7 +53,7 @@ const AthleteProfile2 = () => {
                   <Grid item xs={12} md={6}>
                     <TextField
                       label="Email"
-                      value="RiD@gmail.com"
+                      value="bheem@gmail.com"
                       fullWidth
                       InputProps={{
                         readOnly: true,
@@ -63,7 +63,7 @@ const AthleteProfile2 = () => {
                   <Grid item xs={12} md={6}>
                     <TextField
                       label="Date of Birth"
-                      value="25 January 2000"
+                      value="25 January 1150"
                       fullWidth
                       InputProps={{
                         readOnly: true,
@@ -73,7 +73,7 @@ const AthleteProfile2 = () => {
                   <Grid item xs={12} md={6}>
                     <TextField
                       label="Present Address"
-                      value="Plot No.123 , Sector - 10A"
+                      value="Thailand"
                       fullWidth
                       InputProps={{
                         readOnly: true,
@@ -83,7 +83,7 @@ const AthleteProfile2 = () => {
                   <Grid item xs={12} md={6}>
                     <TextField
                       label="Permanent Address"
-                      value="House No.231,456,DLF COLONY"
+                      value="Dholakpur"
                       fullWidth
                       InputProps={{
                         readOnly: true,
@@ -93,7 +93,7 @@ const AthleteProfile2 = () => {
                   <Grid item xs={12} md={6}>
                     <TextField
                       label="City"
-                      value="Gurgram"
+                      value="Golu"
                       fullWidth
                       InputProps={{
                         readOnly: true,
@@ -103,7 +103,7 @@ const AthleteProfile2 = () => {
                   <Grid item xs={12} md={6}>
                     <TextField
                       label="Debut Date"
-                      value="23 Feb, 2009"
+                      value="23 Aug, 2250"
                       fullWidth
                       InputProps={{
                         readOnly: true,
@@ -113,7 +113,7 @@ const AthleteProfile2 = () => {
                   <Grid item xs={12} md={6}>
                     <TextField
                       label="Pin Code"
-                      value="123-234-009"
+                      value="131028"
                       fullWidth
                       InputProps={{
                         readOnly: true,
