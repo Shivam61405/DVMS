@@ -4,10 +4,11 @@ import Dashboard from "./pages/Dashboard";
 import Cases from "./pages/Cases";
 import CaseList from "./pages/CaseList";
 import AthleteProfile from "./pages/AthleteProfile";
-
 import DataSource from "./pages/DataSource";
 import ABP from "./pages/ABP";
 import InvestigatorPanel from "./pages/InvestigatorPanel";
+import RegistrationTestingPanel from "./pages/RegistrationTestingPanel";
+import ReportSection from "./pages/ReportSection";
 import Sidebar from "./components/Sidebar";
 
 function App() {
@@ -30,6 +31,8 @@ function App() {
             <Route path="/athlete-profile" element={<AthleteProfile />} />
             <Route path="/caselist" element={<CaseList />} />
             <Route path="/investigator-panel" element={<InvestigatorPanel />} />
+            <Route path="/registration-testing-panel" element={<RegistrationTestingPanel />} />
+            <Route path="/report-section" element={<ReportSection />} />
           </Routes>
         </div>
       </div>

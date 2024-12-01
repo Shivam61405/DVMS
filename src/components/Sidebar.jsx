@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
 import DVMSIcon from '../DVMS.png'; // Correct relative path
@@ -7,8 +7,12 @@ import CasesIcon from '../Cases.png'; // Correct relative path
 import DataSourceIcon from '../Datasource.png'; // Correct relative path
 import ABPIcon from '../Reports.png'; // Correct relative path
 import InvestigatorPanelIcon from '../Investigation.png'; // Correct relative path
+import OpenArrowIcon from '../openarrow.png'; // Path to open arrow icon
+import CloseArrowIcon from '../closearrow.png'; // Path to close arrow icon
 
 const Sidebar = () => {
+  const [showMore, setShowMore] = useState(false);
+
   return (
     <Box
       sx={{
@@ -22,8 +26,8 @@ const Sidebar = () => {
         zIndex: 1000, // Ensure it stays on top
       }}
     >
-      <Typography variant="h6" sx={{ marginBottom: 2, fontWeight: "bold", color: "#007bff" }}>
-        <img src={DVMSIcon} alt="DVMS Icon" style={{ marginRight: 8, width: 24, height: 24 }} />
+      <Typography variant="h5" sx={{ marginBottom: 2, fontWeight: "bold", color: "#007bff" }}>
+        <img src={DVMSIcon} alt="DVMS Icon" style={{ marginRight: 8, width: 32, height: 32 }} />
         DVMS
       </Typography>
       <NavLink 
@@ -32,6 +36,7 @@ const Sidebar = () => {
           display: "block", 
           padding: "12px 16px", 
           textDecoration: "none", 
+          fontSize: "18px", 
           color: isActive ? "#007bff" : "black" 
         })}
       >
@@ -44,6 +49,7 @@ const Sidebar = () => {
           display: "block", 
           padding: "12px 16px", 
           textDecoration: "none", 
+          fontSize: "18px", 
           color: isActive ? "#007bff" : "black" 
         })}
       >
@@ -56,6 +62,7 @@ const Sidebar = () => {
           display: "block", 
           padding: "12px 16px", 
           textDecoration: "none", 
+          fontSize: "18px", 
           color: isActive ? "#007bff" : "black" 
         })}
       >
@@ -68,11 +75,12 @@ const Sidebar = () => {
           display: "block", 
           padding: "12px 16px", 
           textDecoration: "none", 
+          fontSize: "18px", 
           color: isActive ? "#007bff" : "black" 
         })}
       >
         <img src={CasesIcon} alt="Athlete-Profile Icon" style={{ marginRight: 8, width: 24, height: 24 }} />
-        AthleteProfile
+        Athlete Profile
       </NavLink>
       <NavLink 
         to="/abp" 
@@ -80,6 +88,7 @@ const Sidebar = () => {
           display: "block", 
           padding: "12px 16px", 
           textDecoration: "none", 
+          fontSize: "18px", 
           color: isActive ? "#007bff" : "black" 
         })}
       >
@@ -92,12 +101,71 @@ const Sidebar = () => {
           display: "block", 
           padding: "12px 16px", 
           textDecoration: "none", 
+          fontSize: "18px", 
           color: isActive ? "#007bff" : "black" 
         })}
       >
         <img src={InvestigatorPanelIcon} alt="Investigator Panel Icon" style={{ marginRight: 8, width: 24, height: 24 }} />
         Investigator Panel
       </NavLink>
+      {!showMore && (
+        <Box
+          sx={{ 
+            cursor: "pointer", 
+            padding: "12px 16px", 
+            color: "#007bff", 
+            display: "flex", 
+            alignItems: "center", 
+            justifyContent: "center" 
+          }}
+          onClick={() => setShowMore(true)}
+        >
+          <img src={OpenArrowIcon} alt="Open Arrow Icon" style={{ width: 34, height: 34 }} />
+        </Box>
+      )}
+      {showMore && (
+        <>
+          <NavLink 
+            to="/registration-testing-panel" 
+            style={({ isActive }) => ({ 
+              display: "block", 
+              padding: "12px 16px", 
+              textDecoration: "none", 
+              fontSize: "18px", 
+              color: isActive ? "#007bff" : "black" 
+            })}
+          >
+            <img src={InvestigatorPanelIcon} alt="Registration Testing Panel Icon" style={{ marginRight: 8, width: 24, height: 24 }} />
+            Registration Testing Panel
+          </NavLink>
+          <NavLink 
+            to="/report-section" 
+            style={({ isActive }) => ({ 
+              display: "block", 
+              padding: "12px 16px", 
+              textDecoration: "none", 
+              fontSize: "18px", 
+              color: isActive ? "#007bff" : "black" 
+            })}
+          >
+            <img src={InvestigatorPanelIcon} alt="Report Section Icon" style={{ marginRight: 8, width: 24, height: 24 }} />
+            Report Section
+          </NavLink>
+          <Box
+            sx={{ 
+              cursor: "pointer", 
+              padding: "12px 16px", 
+              color: "#007bff", 
+              display: "flex", 
+              alignItems: "center", 
+              justifyContent: "center" 
+            }}
+            onClick={() => setShowMore(false)}
+          >
+            <img src={CloseArrowIcon} alt="Close Arrow Icon" style={{ width: 34, height: 34 }} />
+          </Box>
+        </>
+      )}
     </Box>
   );
 };

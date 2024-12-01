@@ -33,7 +33,7 @@ const DataSource = () => {
       <Box sx={{ padding: 2, borderRadius: 2, boxShadow: 1 }}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
-            <Box sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', marginBottom: 2 }}>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', marginBottom: 2, gap: '1%' }}>
               <Button variant="contained" color="primary" sx={{ flex: '1 0 21%', margin: 1, borderRadius: 2, height: '100px' }} startIcon={<AnalyticsIcon />}>
                 ABP
               </Button>
