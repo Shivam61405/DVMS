@@ -113,7 +113,7 @@ const Dashboard = () => {
           </Box>
           <Box bgcolor="white" borderRadius={2} boxShadow={1} gridColumn="span 8" p={2} display="flex" flexDirection="column" alignItems="center">
             <Typography fontWeight="bold" variant="h6" mb={2}>
-              Athlete performance Report
+              Athlete Performance Report
             </Typography>
             <BarChart data={dataBar} height={350} width={600}>
               <CartesianGrid strokeDasharray="3 3" />
@@ -126,84 +126,91 @@ const Dashboard = () => {
             </BarChart>
           </Box>
           <Box bgcolor="white" borderRadius={2} boxShadow={1} gridColumn="span 4" p={2} display="flex" flexDirection="column" alignItems="center">
-  <Typography fontWeight="bold" variant="h6" mb={2}>
-    Case management
-  </Typography>
-  <PieChart height={400} width={400}>
-    <Pie
-      cx={200}
-      cy={200}
-      data={dataPie}
-      dataKey="value"
-      fill="#8884d8"
-      labelLine={false}
-      label={renderCustomizedLabel}
-      outerRadius={120} // Increase the outer radius
-      innerRadius={50} // Increase the inner radius
-      paddingAngle={5}
-    >
-      {dataPie.map((entry, index) => (
-        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-      ))}
-    </Pie>
-  </PieChart>
-</Box>
+            <Typography fontWeight="bold" variant="h6" mb={2}>
+              Case Management
+            </Typography>
+            <PieChart height={400} width={400}>
+              <Pie
+                cx={200}
+                cy={200}
+                data={dataPie}
+                dataKey="value"
+                fill="#8884d8"
+                labelLine={false}
+                label={renderCustomizedLabel}
+                outerRadius={120}
+                innerRadius={50}
+                paddingAngle={5}
+              >
+                {dataPie.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                ))}
+              </Pie>
+            </PieChart>
+          </Box>
           <Box bgcolor="white" borderRadius={2} boxShadow={1} gridColumn="span 6" p={2}>
             <Typography fontWeight="bold" variant="h6">
               New Athletes
             </Typography>
             <Box display="flex" mt={2}>
               <Box flex="1" textAlign="center">
-                <img
-                  alt="Ritika Sharma"
-                  className="w-10 h-10 rounded-full mx-auto"
-                  height="40"
-                  src="https://storage.googleapis.com/a1aa/image/EgxNNzpafNwNACvMeyjK3MDU9cnfU1mX4Q5Hw7rbfdsFmFVPB.jpg"
-                  width="40"
-                  style={{ borderRadius: '50%' }} // Making images circular
-                />
-                <Typography>
-                  Ritika Sharma
-                </Typography>
+                <a href="link_to_ritika_sharma_profile" target="_blank" rel="noopener noreferrer">
+                  <img
+                    alt="Ritika Sharma"
+                    className="w-10 h-10 rounded-full mx-auto"
+                    height="40"
+                    src="https://storage.googleapis.com/a1aa/image/EgxNNzpafNwNACvMeyjK3MDU9cnfU1mX4Q5Hw7rbfdsFmFVPB.jpg"
+                    width="40"
+                    style={{ borderRadius: '50%' }}
+                  />
+                  <Typography>
+                    Ritika Sharma
+                  </Typography>
+                </a>
                 <Typography color="textSecondary" variant="body2">
                   Runner
                 </Typography>
               </Box>
               <Box flex="1" textAlign="center">
-                <img
-                  alt="Ajay Chauhan"
-                  className="w-10 h-10 rounded-full mx-auto"
-                  height="40"
-                  src="https://storage.googleapis.com/a1aa/image/ZF5mZjvO6gp4Ed579iS8SURceQXqrQL23DkhxG6aApUyso6JA.jpg"
-                  width="40"
-                  style={{ borderRadius: '50%' }} // Making images circular
-                />
-                <Typography>
-                  Ajay Chauhan
-                </Typography>
+                <a href="link_to_ajay_chauhan_profile" target="_blank" rel="noopener noreferrer">
+                  <img
+                    alt="Ajay Chauhan"
+                    className="w-10 h-10 rounded-full mx-auto"
+                    height="40"
+                    src="https://storage.googleapis.com/a1aa/image/ZF5mZjvO6gp4Ed579iS8SURceQXqrQL23DkhxG6aApUyso6JA.jpg"
+                    width="40"
+                    style={{ borderRadius: '50%' }}
+                  />
+                  <Typography>
+                    Ajay Chauhan
+                  </Typography>
+                </a>
                 <Typography color="textSecondary" variant="body2">
                   Swimmer
                 </Typography>
               </Box>
               <Box flex="1" textAlign="center">
-                <img
-                  alt="Rahul Kumar"
-                  className="w-10 h-10 rounded-full mx-auto"
-                  height="40"
-                  src="https://storage.googleapis.com/a1aa/image/eEwXZvpL4kUgRamVpIY9GJ7lQki5fxNttI7VyREsRvGjZR1TA.jpg"
-                  width="40"
-                  style={{ borderRadius: '50%' }} // Making images circular
-                />
-                <Typography>
-                  Rahul Kumar
-                </Typography>
+                <a href="link_to_rahul_kumar_profile" target="_blank" rel="noopener noreferrer">
+                  <img
+                    alt="Rahul Kumar"
+                    className="w-10 h-10 rounded-full mx-auto"
+                    height="40"
+                    src="https://storage.googleapis.com/a1aa/image/eEwXZvpL4kUgRamVpIY9GJ7lQki5fxNttI7VyREsRvGjZR1TA.jpg"
+                    width="40"
+                    style={{ borderRadius: '50%' }}
+                  />
+                  <Typography>
+                    Rahul Kumar
+                  </Typography>
+                </a>
                 <Typography color="textSecondary" variant="body2">
                   Cyclist
                 </Typography>
               </Box>
             </Box>
           </Box>
-          <Box bgcolor="white" borderRadius={2} boxShadow={1} gridColumn="span 6" p={2}>
+          <Box bgcolor="
+white" borderRadius={2} boxShadow={1} gridColumn="span 6" p={2}>
             <Typography fontWeight="bold" variant="h6">
               Cases Solved
             </Typography>

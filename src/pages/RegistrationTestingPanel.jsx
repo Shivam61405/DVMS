@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Header from "../components/Header";
 import { Box, Typography, TextField, Button, LinearProgress, Snackbar, Alert } from "@mui/material";
 
 const RegistrationTestingPanel = () => {
@@ -34,7 +33,7 @@ const RegistrationTestingPanel = () => {
     setTimeout(() => {
       setUploading(false);
       setSuccess(true);
-    }, 2000); // Adjust the timeout as necessary
+    }, 2000);
   };
 
   const handleCloseSnackbar = () => {
@@ -43,7 +42,6 @@ const RegistrationTestingPanel = () => {
 
   return (
     <Box sx={{ backgroundColor: "#f0f2f5", minHeight: "100vh", padding: 2 }}>
-      <Header title="Registered Testing Pool" subtitle="" />
       <Box sx={{ padding: 2, backgroundColor: "white", borderRadius: 1, boxShadow: 1, maxWidth: 600, margin: "auto" }}>
         <Typography variant="h6" fontWeight="bold" sx={{ marginBottom: 2 }}>Please provide your contact details. After this information is validated, it will be used to send a temporary code as an alternate login method.</Typography>
         <Box component="form" noValidate autoComplete="off" onSubmit={handleSubmit}>

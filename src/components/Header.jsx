@@ -1,6 +1,7 @@
 import { Typography, Box, IconButton, InputBase, Avatar } from "@mui/material";
 import React from "react";
 import { Search, Notifications, Settings } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 const Header = ({ title, subtitle }) => {
   return (
@@ -16,12 +17,12 @@ const Header = ({ title, subtitle }) => {
       <Box alignItems="center" display="flex">
         <Box
           alignItems="center"
-          bgcolor="#D3D3D31" 
+          bgcolor="#D3D3D31"
           borderRadius="8px"
           display="flex"
           mr={2}
           p={1}
-          sx={{ border: '2px solid royalblue' }} // Added border style
+          sx={{ border: '2px solid royalblue' }}
         >
           <Search />
           <InputBase ml={1} placeholder="Search for something" />
@@ -29,7 +30,7 @@ const Header = ({ title, subtitle }) => {
         <IconButton>
           <Notifications />
         </IconButton>
-        <IconButton>
+        <IconButton component={Link} to="/settings">
           <Settings />
         </IconButton>
         <Avatar alt="User profile" ml={1} src="https://placehold.co/40x40" />
