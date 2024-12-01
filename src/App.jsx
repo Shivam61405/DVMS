@@ -4,6 +4,7 @@ import Dashboard from "./pages/Dashboard";
 import Cases from "./pages/Cases";
 import CaseList from "./pages/CaseList";
 import AthleteProfile from "./pages/AthleteProfile";
+import AthleteProfile2 from "./pages/AthleteProfile2"; // Import AthleteProfile2 component
 import DataSource from "./pages/DataSource";
 import ABP from "./pages/ABP";
 import InvestigatorPanel from "./pages/InvestigatorPanel";
@@ -31,6 +32,7 @@ function App() {
             <Route path="/data-source" element={<DataSource />} />
             <Route path="/abp" element={<ABP />} />
             <Route path="/athlete-profile" element={<AthleteProfile />} />
+            <Route path="/athlete-profile2" element={<AthleteProfile2 />} /> {/* Add route for AthleteProfile2 */}
             <Route path="/caselist" element={<CaseList />} />
             <Route path="/investigator-panel" element={<InvestigatorPanel />} />
             <Route path="/settings" element={<Settings />}>

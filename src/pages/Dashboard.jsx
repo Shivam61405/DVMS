@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header"; // Import the Header component
 import { Box, Typography } from "@mui/material";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, PieChart, Pie, Cell, LineChart, Line, ResponsiveContainer } from 'recharts';
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const dataBar = [
   { name: 'Sat', Cleared: 10, Suspicious: 15 },
@@ -113,7 +114,7 @@ const Dashboard = () => {
           </Box>
           <Box bgcolor="white" borderRadius={2} boxShadow={1} gridColumn="span 8" p={2} display="flex" flexDirection="column" alignItems="center">
             <Typography fontWeight="bold" variant="h6" mb={2}>
-              Athlete Performance Report
+              Athlete performance Report
             </Typography>
             <BarChart data={dataBar} height={350} width={600}>
               <CartesianGrid strokeDasharray="3 3" />
@@ -127,7 +128,7 @@ const Dashboard = () => {
           </Box>
           <Box bgcolor="white" borderRadius={2} boxShadow={1} gridColumn="span 4" p={2} display="flex" flexDirection="column" alignItems="center">
             <Typography fontWeight="bold" variant="h6" mb={2}>
-              Case Management
+              Case management
             </Typography>
             <PieChart height={400} width={400}>
               <Pie
@@ -138,8 +139,8 @@ const Dashboard = () => {
                 fill="#8884d8"
                 labelLine={false}
                 label={renderCustomizedLabel}
-                outerRadius={120}
-                innerRadius={50}
+                outerRadius={120} // Increase the outer radius
+                innerRadius={50} // Increase the inner radius
                 paddingAngle={5}
               >
                 {dataPie.map((entry, index) => (
@@ -154,63 +155,62 @@ const Dashboard = () => {
             </Typography>
             <Box display="flex" mt={2}>
               <Box flex="1" textAlign="center">
-                <a href="link_to_ritika_sharma_profile" target="_blank" rel="noopener noreferrer">
+                <Link to="/athlete-profile2">
                   <img
                     alt="Ritika Sharma"
                     className="w-10 h-10 rounded-full mx-auto"
                     height="40"
                     src="https://storage.googleapis.com/a1aa/image/EgxNNzpafNwNACvMeyjK3MDU9cnfU1mX4Q5Hw7rbfdsFmFVPB.jpg"
                     width="40"
-                    style={{ borderRadius: '50%' }}
+                    style={{ borderRadius: '50%' }} // Making images circular
                   />
                   <Typography>
                     Ritika Sharma
                   </Typography>
-                </a>
-                <Typography color="textSecondary" variant="body2">
-                  Runner
-                </Typography>
+                  <Typography color="textSecondary" variant="body2">
+                    Runner
+                  </Typography>
+                </Link>
               </Box>
               <Box flex="1" textAlign="center">
-                <a href="link_to_ajay_chauhan_profile" target="_blank" rel="noopener noreferrer">
+                <Link to="/athlete-profile2">
                   <img
                     alt="Ajay Chauhan"
                     className="w-10 h-10 rounded-full mx-auto"
                     height="40"
                     src="https://storage.googleapis.com/a1aa/image/ZF5mZjvO6gp4Ed579iS8SURceQXqrQL23DkhxG6aApUyso6JA.jpg"
                     width="40"
-                    style={{ borderRadius: '50%' }}
+                    style={{ borderRadius: '50%' }} // Making images circular
                   />
                   <Typography>
                     Ajay Chauhan
                   </Typography>
-                </a>
-                <Typography color="textSecondary" variant="body2">
-                  Swimmer
-                </Typography>
+                  <Typography color="textSecondary" variant="body2">
+                    Swimmer
+                  </Typography>
+                </Link>
               </Box>
               <Box flex="1" textAlign="center">
-                <a href="link_to_rahul_kumar_profile" target="_blank" rel="noopener noreferrer">
+                <Link to="/athlete-profile2">
                   <img
                     alt="Rahul Kumar"
                     className="w-10 h-10 rounded-full mx-auto"
                     height="40"
                     src="https://storage.googleapis.com/a1aa/image/eEwXZvpL4kUgRamVpIY9GJ7lQki5fxNttI7VyREsRvGjZR1TA.jpg"
                     width="40"
-                    style={{ borderRadius: '50%' }}
+                    style={{ borderRadius: '50%' }} // Making images circular
                   />
                   <Typography>
                     Rahul Kumar
                   </Typography>
-                </a>
-                <Typography color="textSecondary" variant="body2">
-                  Cyclist
-                </Typography>
+                  <Typography color="textSecondary" variant="body2">
+                    Cyclist
+                  </Typography>
+                </Link>
               </Box>
             </Box>
           </Box>
-          <Box bgcolor="
-white" borderRadius={2} boxShadow={1} gridColumn="span 6" p={2}>
+          <Box bgcolor="white" borderRadius={2} boxShadow={1} gridColumn="span 6" p={2}>
             <Typography fontWeight="bold" variant="h6">
               Cases Solved
             </Typography>
