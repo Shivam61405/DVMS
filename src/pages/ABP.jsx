@@ -31,7 +31,7 @@ const ABP = () => {
 
   return (
     <Box sx={{ backgroundColor: '#f0f2f5', minHeight: '100vh', padding: 2 }}>
-      <Box sx={{ flexGrow: 1, p: 3 }}>
+      
         <Header title='ABP' subtitle='Analyze behavior patterns' />
         <Grid container spacing={2}>
           <Grid item xs={12} md={4}>
@@ -156,7 +156,7 @@ const ABP = () => {
                     <TableRow>
                       <TableCell>04.</TableCell>
                       <TableCell>Vishnu</TableCell>
- <TableCell>ATH54</TableCell>
+                      <TableCell>ATH54</TableCell>
                       <TableCell sx={{ color: 'blue' }}>Read</TableCell>
                     </TableRow>
                     <TableRow>
@@ -164,14 +164,14 @@ const ABP = () => {
                       <TableCell>Sam</TableCell>
                       <TableCell>ATH02</TableCell>
                       <TableCell sx={{ color: 'blue' }}>Read</TableCell>
-                    </TableRow>
+                      </TableRow>
                   </TableBody>
                 </Table>
               </TableContainer>
             </Paper>
           </Grid>
         </Grid>
-      </Box>
+      
     </Box>
   );
 };

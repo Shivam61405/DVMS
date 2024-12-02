@@ -126,7 +126,7 @@ const Sidebar = () => {
       {showMore && (
         <>
           <NavLink 
-            to="/registration-testing-panel" 
+            to="/athleteprofile2" 
             style={({ isActive }) => ({ 
               display: "block", 
               padding: "12px 16px", 
@@ -135,21 +135,8 @@ const Sidebar = () => {
               color: isActive ? "#007bff" : "black" 
             })}
           >
-            <img src={InvestigatorPanelIcon} alt="Registration Testing Panel Icon" style={{ marginRight: 8, width: 24, height: 24 }} />
-            Registration Testing Panel
-          </NavLink>
-          <NavLink 
-            to="/report-section" 
-            style={({ isActive }) => ({ 
-              display: "block", 
-              padding: "12px 16px", 
-              textDecoration: "none", 
-              fontSize: "18px", 
-              color: isActive ? "#007bff" : "black" 
-            })}
-          >
-            <img src={InvestigatorPanelIcon} alt="Report Section Icon" style={{ marginRight: 8, width: 24, height: 24 }} />
-            Report Section
+            <img src={CasesIcon} alt="Athlete-Profile Icon" style={{ marginRight: 8, width: 24, height: 24 }} />
+            Athlete Profile 2
           </NavLink>
           <Box
             sx={{ 
